@@ -590,7 +590,7 @@ class _ValignBaselineRenderObject extends RenderProxyBox {
           _paddingTop += offsetY;
           _baselineWithOffset = rowBaseline;
           WidgetsBinding.instance
-              ?.addPostFrameCallback((_) => markNeedsLayout());
+              .addPostFrameCallback((_) => markNeedsLayout());
           return;
         }
       } else if (rowBaseline < baselineWithOffset) {
@@ -604,7 +604,7 @@ class _ValignBaselineRenderObject extends RenderProxyBox {
             sibling._paddingTop += offsetY;
             sibling._baselineWithOffset = baselineWithOffset;
             WidgetsBinding.instance
-                ?.addPostFrameCallback((_) => sibling.markNeedsLayout());
+                .addPostFrameCallback((_) => sibling.markNeedsLayout());
           }
         }
       }

@@ -114,7 +114,7 @@ class AnchorRegistry {
       return completer.complete(false);
     }
 
-    WidgetsBinding.instance?.addPostFrameCallback(
+    WidgetsBinding.instance.addPostFrameCallback(
       (_) => _ensureVisible(
         id,
         completer: completer,
